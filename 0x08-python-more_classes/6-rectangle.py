@@ -5,8 +5,10 @@ A module with a Rectangle that does nothing
 
 class Rectangle:
     """
-    A class to represent a rectangle
+    An empty Rectangle class
     """
+
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """
