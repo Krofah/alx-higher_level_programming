@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-"""Author - Krofah"""
 
 """ module that created a rectangle class"""
 
