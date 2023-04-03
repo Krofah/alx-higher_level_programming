@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 
-""" module that created a rectangle class"""
+""" module with an empty Rectangle"""
 
 
 class Rectangle:
-    """ does nothing, just pass """
+    """ A Rectangle with nothing inside 
+    """
     pass
 
