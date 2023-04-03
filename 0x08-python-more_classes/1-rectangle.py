@@ -5,31 +5,41 @@ A module with a Rectangle that is empty
 """
 
 class Rectangle:
+    """
+    An empty Rectangle class
+    """
+
     def __init__(self, width=0, height=0):
+        self.__width = 0
+        self.__height = 0
         self.width = width
         self.height = height
-    
-    @property
-    def width(self):
+
+    def __repr__(self):
+        return f"Rectangle({self.width}, {self.height})"
+
+    def __str__(self):
+        return f"Rectangle with width={self.width} and height={self.height}"
+
+    def get_width(self):
         return self.__width
-    
-    @width.setter
-    def width(self, value):
+
+    def set_width(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
-    
-    @property
-    def height(self):
+
+    def get_height(self):
         return self.__height
-    
-    @height.setter
-    def height(self, value):
+
+    def set_height(self, value):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         elif value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
 
+    width = property(get_width, set_width)
+    height = property(get_height, set_height)
